@@ -2,7 +2,7 @@
 //
 //////////////////////////////////////////////////////////////////////
 
-//Some parts of code were copied out from tinyxml component
+//Some parts of encoding conversion code were copied out from 'tinyxml' component
 
 #include "SaxParser.h"
 
