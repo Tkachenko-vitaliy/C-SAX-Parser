@@ -1,8 +1,6 @@
 // SaxParser.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
-
 #include "SaxFormatter.h"
 
 #include <fstream>
@@ -19,7 +17,7 @@ protected:
     void Output(const char* szText) override { m_file << szText; }
 };
 
-int _tmain(int argc, _TCHAR* argv[])
+int main(int argc, char* argv[])
 {
     switch (argc)
     {
@@ -52,6 +50,7 @@ int _tmain(int argc, _TCHAR* argv[])
         CXmlFileFormatter handler(output);
         CSaxParser parser; 
         parser.Parse(&input, &handler);
+        std::cout << "Successful" << std::endl;
     }
     catch (CSaxParserException& e)
     {
